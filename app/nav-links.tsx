@@ -18,7 +18,7 @@ export default function NavLinks() {
         <>
           <Link
             href="/dashboard"
-            className="text-sm font-medium text-blue-600 hover:underline"
+            className="text-sm font-medium text-orange-700 hover:underline"
           >
             Dashboard
           </Link>
@@ -35,14 +35,14 @@ export default function NavLinks() {
       ) : (
         <Link
           href="/login"
-          className="text-sm font-medium text-blue-600 hover:underline"
+          className="text-sm font-medium text-orange-700 hover:underline"
         >
           Clinic Login
         </Link>
       )}
       <Link
         href="/add-pet"
-        className="text-sm font-medium bg-blue-600 text-white px-3 py-1.5 rounded-lg hover:bg-blue-700 transition"
+        className="text-sm font-medium bg-orange-500 text-white px-3 py-1.5 rounded-full hover:bg-orange-600 transition"
       >
         + Add Pet
       </Link>
