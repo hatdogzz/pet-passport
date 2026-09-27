@@ -27,7 +27,7 @@ export default function NavLinks() {
               await supabase.auth.signOut();
               window.location.reload();
             }}
-            className="text-sm font-medium text-gray-500 hover:underline"
+            className="text-sm font-medium text-gray-500 hover:text-gray-700"
           >
             Log Out
           </button>
@@ -35,7 +35,7 @@ export default function NavLinks() {
       ) : (
         <Link
           href="/login"
-          className="text-sm font-medium text-orange-700 hover:underline"
+          className="text-sm font-medium text-orange-700 hover:text-orange-800"
         >
           Clinic Login
         </Link>
