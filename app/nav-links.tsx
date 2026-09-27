@@ -18,7 +18,7 @@ export default function NavLinks() {
         <>
           <Link
             href="/dashboard"
-            className="text-sm font-medium text-orange-700 hover:underline"
+            className="text-sm font-medium text-orange-700 hover:text-orange-800"
           >
             Dashboard
           </Link>
