@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { supabase } from "@/lib/supabase";
 
+
 export default function AddPet() {
   const [ownerName, setOwnerName] = useState("");
   const [ownerPhone, setOwnerPhone] = useState("");
@@ -15,12 +16,16 @@ export default function AddPet() {
   const [message, setMessage] = useState("");
 
   async function handleAddPet() {
+    const { data: sessionCheck, error: sessionError } = await supabase.auth.getSession();
+    console.log("SESSION CHECK:", sessionCheck, "ERROR:", sessionError);
+
     // Step 1: create the owner first
     const { data: owner, error: ownerError } = await supabase
       .from("owners")
       .insert({ name: ownerName, phone: ownerPhone, email: ownerEmail })
       .select()
       .single();
+    // ...rest stays the same
 
     if (ownerError || !owner) {
       setMessage("Error creating owner: " + ownerError?.message);
