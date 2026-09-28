@@ -27,7 +27,7 @@ export default async function PetProfile({ params }: { params: Promise<{ id: str
         <p className="text-gray-500 mb-4">Pet Passport</p>
 
         <div className="flex justify-center mb-4">
-          <PetQR url={`http://localhost:3000/pet/${pet.id}`} />
+          <PetQR petId={pet.id} />
         </div>
 
         <div className="text-left text-sm text-gray-700 space-y-1 mb-6">
