@@ -28,9 +28,17 @@ export default async function PetProfile({ params }: { params: Promise<{ id: str
   return (
     <main className="min-h-screen bg-orange-50 px-4 py-10">
       <div className="max-w-md mx-auto">
-        <Link href="/" className="text-lg font-bold text-orange-900 mb-6 block">
-          🐾 PetPass
-        </Link>
+        <div className="flex items-center justify-between mb-6">
+          <Link href="/" className="text-lg font-bold text-orange-900">
+            🐾 PetPass
+          </Link>
+          <Link
+            href="/"
+            className="text-sm font-medium text-orange-600 hover:text-orange-800 flex items-center gap-1"
+          >
+            ← Back
+          </Link>
+        </div>
 
         <div className="bg-white shadow-sm rounded-3xl p-6 text-center">
           <div className="w-16 h-16 mx-auto rounded-full bg-orange-100 flex items-center justify-center text-3xl mb-3">
@@ -49,9 +57,10 @@ export default async function PetProfile({ params }: { params: Promise<{ id: str
             <p><span className="font-semibold">Birthdate:</span> {pet.birthdate}</p>
           </div>
 
-          <h2 className="text-left font-semibold text-gray-800 mb-2">
-            Vaccine & Health Records
-          </h2>
+          <div className="bg-orange-500 text-white text-xs font-semibold rounded-t-xl px-3 py-2 flex justify-between">
+            <span>Vaccine Type</span>
+            <span>Status</span>
+          </div>
 
           {records && records.length > 0 ? (
             <div className="overflow-x-auto">
